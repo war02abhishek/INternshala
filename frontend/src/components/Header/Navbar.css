@@ -1,0 +1,101 @@
+.navbar {
+  /* position: fixed; */
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  align-items: center;
+ 
+  width: 100%;
+  background:#f7f7f7;
+  z-index: 1;
+  font-family: "Belleza", sans-serif;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-icon {
+  font-size: 1.5rem;
+  color:  #af9a7d;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear; 
+  /* this transactionn is for toogle navbutton colmns slowly */
+  list-style-type: none;
+}
+.nav-links a {
+ 
+    text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: 0.25s;
+}
+.nav-links a:hover {
+  color:  #af9a7d;
+}
+/* .li2 a{
+   margin-left: rem;
+} */
+@keyframes lineanimation {
+  0% {
+    border-bottom-width: 0%;
+  }
+  100% {
+    border-bottom-width: 100%;
+  }
+}
+
+.li2 a:hover {
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #fdbd59;
+  animation: lineanimation 0.3s ease-in-out forwards;
+}
+
+.show-nav {
+  height: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: 2rem;
+    display: flex;
+    padding: 0.51rem;
+  }
+  .nav-links a {
+    margin: 0 4rem;
+    padding: 0.1rem;
+  }
+}
+
+.Logo {
+  margin-left: 0.5vmax;
+  width: 4.2rem;
+  cursor: pointer;
+}
+
+.LogoText {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000;
+  margin-left: 1rem;
+  margin-top: 1.8rem;
+}
